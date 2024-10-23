@@ -52,4 +52,17 @@ export default class Stack {
     }
     return current.data; // Returnerer data fra den fundne node
   }
+
+  dumpList() {
+    if (this.tail === null) {
+      console.log("Stack is empty.");
+      return;
+    }
+    let current = this.tail;
+    console.log("Stack contents:");
+    while (current !== null) {
+      console.log(current.data);
+      current = current.next;
+    }
+  }
 }
